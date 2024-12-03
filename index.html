@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/icons/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="h1">
+    <h1 class="text-center">Product Crud</h1>
+    </div>
+    <div class="card col-md-8 mx-auto">
+        <div class="card-body">
+          <div class="product details">
+            <h4 class="text-center">Add Product Details</h4>
+            <div class="product d-flex">
+                <div class="pName">
+                <input type="text" placeholder="Product Name" id="productName">
+                <span class="none" id="span"></span>
+                </div>
+                <div class="cate">
+                <select id="category" class="">
+                    <option disabled selected hidden value=""> __Category__</option>
+                    <option value="Food">Food</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Others">Others</option>
+                </select>
+                <span class="none" id="span4"></span>
+            </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+            <div class="product-cost d-lg-flex d-sm-block" id="product-cost">
+                <div class="col-lg-2 my-3">
+                <!-- <label> Cost</label> -->
+                <input type="number" placeholder="Cost" id="cost">
+                <span class="none" id="span"></span>
+                <span class="none" id="span2"></span>
+                </div>
+                <div class="col-lg-2  my-3">
+                <!-- <label>Taxs</label> -->
+                <input type="number" placeholder="%Taxs" id="tax">
+                <span class="none" id="span"></span>
+                <span class="none" id="span2"></span>
+                </div>
+                <div class="col-lg-2  my-3">
+                <!-- <label>Profit</label> -->
+                <input type="number" placeholder="%Profit" id="profit">
+                <span class="none" id="span"></span>
+                <span class="none" id="span2"></span>
+                </div>
+                <div class="col-lg-2  my-3">
+                <!-- <label>Net Profit</label> -->
+                <input type="number" readonly placeholder="Net Profit" id="net_profit">
+                <span class="none" id="span"></span>
+                <span class="none" id="span2"></span>
+                </div>
+                <div class="col-lg-2  my-3">
+                <!-- <label>Selling Price</label> -->
+                <input type="number" readonly placeholder="Selling Price" id="selling_price">
+                <span class="none" id="span"></span>
+                <span class="none" id="span2"></span>
+                </div>
+             </div>
+     </div>
+     <hr>
+     <div class="card-body">
+     <div class="product-add d-flex">
+        <div class="count">
+       <input type="text" placeholder="Count" id="count">
+       <span class="none" id="span"></span>
+       </div>
+       <div class="img">
+       <input type="url" placeholder="Image Url" id="img">
+       <span class="none" id="span"></span><br>
+       <span class="none" id="span3"></span>
+       </div>
+     </div>
+    </div>
+    <div class="col-md-6 mx-auto my-3">
+    <div class="d-grid">
+        <button class="btn btn-primary" id="addProductBtn"> Add Product </button>
+    </div>
+</div>
+</div>
+
+      <div id="confirm-modal">  
+       </div>
+      <div id="overlay"></div>
+
+<div class=" mt-5 mx-auto col-lg-10" id="pro">
+    <div class="card">
+        <div class="card-body">
+          <div class="empty">
+            <div class="alert alert-danger text-center"> No Products Yet</div>
+         </div>
+         <div class="deleteAll none">
+            <button class="btn btn-danger col-md-6 col-sm-8 mx-auto my-3 d-grid">Delete All</button>
+         </div>
+        <table class="table table-dark none">
+        <thead>
+            <tr class="tr"> 
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>categorg</th>
+            <th colspan="3" class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+</div>
+</div>
+    
+    <script src="./js/main2.js"></script>
+</body>
+</html>
